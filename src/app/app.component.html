@@ -148,7 +148,7 @@
     </nav>
 
     <div class="d-flex flex-row my-5" style="height: 75%; width: 100%;">
-        
+
         <div class="row" style="width: 25%; height: 100%; margin: 10px; ">
 
 
@@ -179,35 +179,40 @@
                     <div class="workingSchedule">
                         <p style="color: grey;">Working Schedule</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="fulltime"  id="flexCheckChecked" checked>
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="fulltime"
+                                id="flexCheckChecked" checked>
                             <label class="form-check-label" for="flexCheckChecked">
                                 Full Time
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="parttime" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="parttime"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Part Time
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="internship" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="internship"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Internship
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="projectwork" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="projectwork"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Project Work
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="vounteering" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="vounteering"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Vounteering
                             </label>
@@ -217,35 +222,40 @@
                     <div class="workingSchedule">
                         <p style="color: grey;">Employment Type</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="fulltime" id="flexCheckChecked" checked>
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="fulltime"
+                                id="flexCheckChecked" checked>
                             <label class="form-check-label" for="flexCheckChecked">
                                 Full Time
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="flexibleschedule" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="flexibleschedule"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Flexible Schedule
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="shiftwork" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="shiftwork"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Shift Work
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="distantwork" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="distantwork"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Distant Work
                             </label>
                         </div><br>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="shiftmethod" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" [(ngModel)]="shiftmethod"
+                                id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Shift Method
                             </label>
@@ -259,21 +269,21 @@
 
         </div>
 
-       
+
 
         <div class="d-flex flex-column align-item-center" style="width: 75%;">
             <div class="row">
-                <h2 style="font-style: italic;">Recommended Jobs</h2>
+                <h2 style="font-style: italic;margin-left: 8%;">Recommended Jobs</h2>
             </div>
             <div class="d-flex flex-row mx-5 justify-content-start align-item-center" style="flex-wrap: wrap;">
 
-           
+
                 <div class="d-flex flex-row justify-content-start align-item-center"
                     style="width: 40%;  border: 1px solid;border-radius: 10px;margin: 10px;padding: 10px;"
                     *ngFor="let arr of myArr">
-    
+
                     <div style="height: 100%; width: 100%;">
-    
+
                         <div style="border-radius:10px; padding: 20px;height: 250px;" class="colored"
                             [ngStyle]="{'background-color': arr.bgColor}">
                             <div class="d-flex flex-row justify-content-between align-item-center">
@@ -289,8 +299,6 @@
                                             d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
                                     </svg>
                                 </div>
-    
-    
                             </div>
                             <div>
                                 <h3 style="font-size: 17px; font-style: italic;">{{arr.company}}</h3>
@@ -302,65 +310,69 @@
                                 <div>
                                     <img [src]="arr.logoUrl" alt="logoUrl" style="width: 35px; border-radius: 20%;">
                                 </div>
-    
+
                             </div>
-                            <div class="d-flex flex-row justify-content-start align-item-center" style="flex-wrap: wrap;">
+                            <div class="d-flex flex-row justify-content-start align-item-center"
+                                style="flex-wrap: wrap;">
                                 <div class="d-flex flex-row justify-content-center align-item-center"
                                     style=" border: 1px solid; border-radius: 6px; height:40px; width: 80px;  margin: 10px 10px 10px 10px; padding: 5px;"
                                     *ngFor="let jarr of arr.jobType">
                                     <h5 style="font-size: 12px; font-weight: 700;">{{jarr}}</h5>
-    
+
                                 </div>
-    
+
                             </div>
                         </div>
-    
+
                         <div class="my-3">
                             <h4>$ {{arr.rate}} / hr</h4>
-    
+
                             <h5 style="color: grey;">{{arr.city}}</h5>
-    
-    
+
+
                             <div class="col-3">
-                                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal" (click)="openModel(arr.id)">Details</button>
-                              </div>
-    
+                                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal"
+                                    (click)="openModel(arr.id)">Details</button>
+                            </div>
+
                             <div class="modal" id="myModal">
                                 <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h4 class="modal-title">Description</h4>
-                                      <button type="button" class="btn-close" (click)="CloseModel()" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-    
-                                        <div class="cardModal">
-                                            <div class="card-body">
-                                              <h5 class="card-title"></h5>
-                                              <h2 class="card-text" style="color: blueviolet;">{{clickedObj}}</h2>
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Description</h4>
+                                            <button type="button" class="btn-close" (click)="CloseModel()"
+                                                data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="cardModal">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"></h5>
+                                                    <h2 class="card-text" style="color: blueviolet;">{{clickedObj}}</h2>
+                                                </div>
                                             </div>
-                                          </div>
-    
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                                (click)="CloseModel()">Close</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="CloseModel()">Close</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
-    
+                            </div>
+
                         </div>
-    
+
                     </div>
                 </div>
-    
-    
-    
+
+
+
             </div>
         </div>
-        
 
-       
+
+
 
     </div>
 </div>

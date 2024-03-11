@@ -136,18 +136,20 @@ export class AppComponent {
 
   filterArr: any[] = [];
 
-  applyFilter() {
-debugger
-    console.log(this.shiftmethod);
-    
+  applyFilter() {    
     this.filterArr = [];
 
     for (let i = 0; i < this.myArr.length; i++) {
       for (let j = 0; j < this.myArr[i].jobType.length; j++) {
-        if ((this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.parttime && this.myArr[i].jobType[j] == 'Part Time') || (this.internship && this.myArr[i].jobType[j] ==  'Internship') || (this.projectwork && this.myArr[i].jobType[j] == 'Project Work') || (this.vounteering && this.myArr[i].jobType[j] == 'Vounteering') || (this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.flexibleschedule && this.myArr[i].jobType[j] == 'Flexible Schedule') || (this.shiftwork && this.myArr[i].jobType[j] == 'Shift Work')) {
+
+      
+
+         if ((this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.parttime && this.myArr[i].jobType[j] == 'Part Time') || (this.internship && this.myArr[i].jobType[j] ==  'Internship') || (this.projectwork && this.myArr[i].jobType[j] == 'Project Work') || (this.vounteering && this.myArr[i].jobType[j] == 'Vounteering') || (this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.flexibleschedule && this.myArr[i].jobType[j] == 'Flexible Schedule') || (this.shiftwork && this.myArr[i].jobType[j] == 'Shift Work')) {
           this.filterArr.push(this.myArr[i])
           break;
         }
+
+       
       }
 
     }

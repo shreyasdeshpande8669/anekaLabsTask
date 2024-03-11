@@ -1,17 +1,6 @@
-.main {
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;  */
-    /* background-color: brown;   */
-     /* height: 100%;  */
-     /* margin-top: 2% */
-    
-      
-}
-
 .verticalLine {
-     border-left: 1px solid rgb(160, 150, 150); /* Adjust color and thickness as needed */
-     height: 50px; /* Adjust the height of the vertical line */
+     border-left: 1px solid rgb(160, 150, 150);
+     height: 50px; 
      margin-right: 10px;
      padding: 0;
 }
