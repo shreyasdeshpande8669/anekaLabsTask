@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core';  
 
 @Component({
   selector: 'app-root',
@@ -73,7 +73,7 @@ export class AppComponent {
       company: 'Airbnb',
       date: '2 April, 2023',
       title: 'Graphic Designer',
-      jobType: ['Part Time', 'Senior level'],
+      jobType: ['Part Time', 'Senior level', 'Shift Method'],
       logoUrl:
         'https://pbs.twimg.com/profile_images/1604935435007901696/BpgKDmvE_400x400.jpg',
       rate: 250,
@@ -138,23 +138,40 @@ export class AppComponent {
 
   applyFilter() {    
     this.filterArr = [];
-
     for (let i = 0; i < this.myArr.length; i++) {
       for (let j = 0; j < this.myArr[i].jobType.length; j++) {
-
-      
-
-         if ((this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.parttime && this.myArr[i].jobType[j] == 'Part Time') || (this.internship && this.myArr[i].jobType[j] ==  'Internship') || (this.projectwork && this.myArr[i].jobType[j] == 'Project Work') || (this.vounteering && this.myArr[i].jobType[j] == 'Vounteering') || (this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.flexibleschedule && this.myArr[i].jobType[j] == 'Flexible Schedule') || (this.shiftwork && this.myArr[i].jobType[j] == 'Shift Work')) {
+         if ((this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.parttime && this.myArr[i].jobType[j] == 'Part Time') || (this.internship && this.myArr[i].jobType[j] ==  'Internship') || (this.projectwork && this.myArr[i].jobType[j] == 'Project Work') || (this.vounteering && this.myArr[i].jobType[j] == 'Vounteering') || (this.fulltime && this.myArr[i].jobType[j] == 'Full Time') || (this.flexibleschedule && this.myArr[i].jobType[j] == 'Flexible Schedule') || (this.shiftwork && this.myArr[i].jobType[j] == 'Shift Work') || (this.shiftmethod && this.myArr[i].jobType[j] == 'Shift Method')  ) {
           this.filterArr.push(this.myArr[i])
           break;
-        }
-
-       
+        } 
       }
-
     }
     this.myArr = [];
     this.myArr = this.filterArr;
-
   }
+
+
+  clearFilter() {
+    this.filterArr = this.myArr;
+    console.log(this.filterArr);
+  }
+
+  stateObj = {
+    state: ['maharashra', 'gujarat','karnataka','khgvj']
+  }
+
+  // selectedState:string = ''
+
+  submit() {
+    // console.log(this.selectedState);
+    
+  }
+
+  data = ''
+  changedVal() {
+    console.log();
+    console.log(this.data);
+    
+  }
+  
 }
