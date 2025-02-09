@@ -1,3 +1,12 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="row">
+<div class="row">
+    <div class="col-2">
+        <div class="btn btn-primary" (click)="gotoApiIntegration()">
+            Go to API integration
+        </div>
+    </div>
+</div>
 <div style="height: 100%; width: 100%;">
     <nav style="border-radius: 30px 30px 0px 0px;"
         class="navbar1 navbar navbar-expand-lg navbar-white bg-dark display: flex; justify-content: flex-end;">
@@ -377,7 +386,7 @@
 
 
     </div>
-</div>
+</div>  
 <hr>
 
 <label for="name">Name</label>
@@ -388,3 +397,79 @@
 </select>
 
 <button (click)="submit()">Submit</button>
+<!-- <router-outlet></router-outlet> -->
+
+  
+</div>
+ 
+    <div class="m-3">
+        <div class="row">
+            <div class="col-4">
+                <form >
+                    <div class="form-row">
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="carId" [(ngModel)]="carObj.carId" placeholder="carId">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="brand" [(ngModel)]="carObj.brand" placeholder="brand">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="model" [(ngModel)]="carObj.model" placeholder="model">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="regNo" [(ngModel)]="carObj.regNo" placeholder="regNo">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="year" [(ngModel)]="carObj.year" placeholder="year">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="color" [(ngModel)]="carObj.color" placeholder="color">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="dailyRate" [(ngModel)]="carObj.dailyRate" placeholder="dailyRate">
+                      </div>
+                      <div class="form-group my-3 col">
+                        <input type="text" class="form-control"  name="carImage" [(ngModel)]="carObj.carImage" placeholder="carImage">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="createCar()">create car</button>
+                  </form>
+            </div>
+            <div class="col-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">carId</th>
+                            <th scope="col">brand</th>
+                            <th scope="col">model</th>
+                            <th scope="col">regNo</th>
+                            <th scope="col">year</th>
+                            <th scope="col">color</th>
+                            <th scope="col">dailyRate</th>
+                            <th scope="col">carImage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let carData of allCars">
+                            <th scope="row">{{carData.carId}}</th>
+                            <th scope="row">{{carData.brand}}</th>
+                            <th scope="row">{{carData.model}}</th>
+                            <th scope="row">{{carData.regNo}}</th>
+                            <th scope="row">{{carData.year}}</th>
+                            <th scope="row">{{carData.color}}</th>
+                            <th scope="row">{{carData.dailyRate}}</th>
+                            <th scope="row"><img src="{{carData.carImage}}" width="70px" alt="carImg"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          
+        </div>
+      
+    </div>
+
+    <app-server-side-filter></app-server-side-filter>
+    <div class="row">
+        <button class="btn btn-warning" [routerLink]="['/feedback']">Go to Feedback</button>
+    </div>
+    <router-outlet></router-outlet>

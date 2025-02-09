@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';  
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';  
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private router: Router, private http: HttpClient) {
+  }
+  ngOnInit(): void {
+    this.getAllCars()
+    console.log(this.allCars);
+    
+  }
   title = 'anekaLabTask';
 
   rangeValues = [25, 75];
@@ -174,4 +183,42 @@ export class AppComponent {
     
   }
   
+  gotoApiIntegration() {
+    this.router.navigate(['api-component']);
+  }
+
+  allCars:any[]= [];
+  getAllCars() {
+    this.http.get('https://freeapi.miniprojectideas.com/api/CarRentalApp/GetCars').subscribe((res:any)=> {
+      this.allCars = res.data
+      console.log('all cars', this.allCars);
+      
+    })
+  }
+  carObj:any = 
+  {
+    "carId": "",
+    "brand": "",
+    "model": "",
+    "year": "",
+    "color": "",
+    "dailyRate": "",
+    "carImage": "",
+    "regNo": ""
+  }
+  createCar() {
+    this.http.post('https://freeapi.miniprojectideas.com/api/CarRentalApp/CreateNewCar',this.carObj).subscribe((res:any)=> {
+      debugger
+      if (res.result) {
+        alert('car data created');
+        this.getAllCars()
+      }
+      else {
+        alert(res.message)
+      }
+    })
+  }
+  // gotoFeedback() {
+  //   this.router.navigate(['feedback'])
+  // }
 }
